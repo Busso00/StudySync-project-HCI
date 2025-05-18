@@ -1,0 +1,93 @@
+### how to test httpClient on VSCode
+
+### test relationship API
+
+POST http://localhost:3001/api/relationships/1 HTTP/1.1
+content-type: application/json
+
+{
+    "otherId": "2",
+    "type": "0"
+}
+
+### 
+
+GET http://localhost:3001/api/relationships/1 HTTP/1.1
+
+###
+
+DELETE http://localhost:3001/api/relationships/1 HTTP/1.1
+Content-type: application/json
+
+{
+    "otherId": "2"
+}
+
+### test messages API
+
+POST http://localhost:3001/api/messages/1 HTTP/1.1
+Content-type: application/json
+
+{
+    "timestamp" : "1",
+    "data": {
+        "uid2": 2,
+        "type": 0,
+        "text" : "user 1 wants to add to contacts"
+    }
+
+}
+
+###
+
+GET http://localhost:3001/api/messages/1 HTTP/1.1
+
+###
+
+DELETE http://localhost:3001/api/messages/1 HTTP/1.1
+Content-type: application/json
+
+{
+    "timestamp" : "1"
+}
+
+### timetable test
+
+GET http://localhost:3001/api/timetable/1 HTTP/1.1
+
+###
+
+
+POST http://localhost:3001/api/timetable/1 HTTP/1.1
+Content-type: application/json
+
+{ 
+    "timeslot":[
+    { "date": "12/12/2020", "time": "8-9", "course": "HCI" },
+    { "date": "12/12/2020", "time": "10-11", "course": "HCI" }
+  ]
+}
+
+
+###
+
+GET http://localhost:3001/api/timetable/1 HTTP/1.1
+
+### response
+{
+  "timeslot": "{\"timeslot\":[{\"date\":\"12/12/2020\",\"time\":\"8-9\",\"course\":\"HCI\"},{\"date\":\"12/12/2020\",\"time\":\"10-11\",\"course\":\"HCI\"}]}"
+}
+
+### mentor API test
+
+PUT http://localhost:3001/api/mentors/2 HTTP/1.1
+Content-type: application/json
+
+{
+    "courses": "HCI: 99, Computer architectures: 100",
+    "year": "2016"
+}
+
+###
+
+GET http://localhost:3001/api/mentors/ HTTP/1.1

@@ -1,0 +1,138 @@
+/* ChatBox.css */
+.contacts-box{
+    display: inline-flex;
+}
+.sidebar-contacts {
+    position: relative;
+    
+    z-index: 990; 
+    width: 20%;
+    
+    top: 0;
+    bottom: 0;
+    background-color: var(--bs-dark);
+    padding-bottom: 50px;
+    
+}
+.contact-box {
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    background-color: #fff;
+    vertical-align: bottom;
+}
+
+.contact-box.selected {
+    background-color: #ccc;;
+}
+
+.chat-box {
+    position:absolute;
+    padding: 10px;
+    z-index: 995;
+    left: 20%;
+    width: 80%; /* 可根据需要调整 */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: auto;
+    height: 80vh;
+}
+.quit-box{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+}
+
+.messages {
+    height: 85vh; /* 可根据需要调整 */
+    overflow-y: auto;
+    padding: 10px;
+    background: #f9f9f9;
+}
+
+.message {
+    position: relative;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    width: 90%;
+    border: #2e434f solid 1px;
+
+}
+
+.message.me {
+    background-color: #e0f7fa;
+    text-align: right;
+    left: 10%;    
+}
+
+.message.other {
+    background-color: white;
+    text-align: left;
+    left: 0;
+}
+
+.message-text {
+    word-wrap: break-word;
+    margin-bottom: 5px;
+}
+
+.message-input {
+    position: fixed;
+    bottom: 0;
+    z-index: 995;
+    display: flex;
+    width: 80%;
+    left: 20%;
+    border-top: 1px solid #ccc;
+    height: 50px;
+    background-color: var(--bs-primary);
+    
+}
+
+.message-input textarea {
+    flex-grow: 1;
+    padding: 10px;
+    border: none;
+    resize: none;
+}
+
+.message-input ::-webkit-scrollbar {
+    display: none;
+}
+  
+/* Hide scrollbar for IE, Edge and Firefox */
+.message-input {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+
+.message-input button {
+    background: #2e434f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.message-time {                                         /* 设置消息时间的样式 */
+    font-size: 12px;
+    color: #888;
+    text-align: right;                                  /* 如果您想要时间显示在右边 */
+}
+.message-date {                                         /* 设置消息时间的样式 */
+    font-size: 12px;
+    color: #888;
+    text-align: center;                                  /* 如果您想要时间显示在中间 */
+}
+
+.message-input button {
+    opacity: 1;
+}
+
+.message-input button {
+    background-color: var(--bs-dark);
+}

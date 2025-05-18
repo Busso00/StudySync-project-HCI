@@ -1,0 +1,533 @@
+
+$primary : #2e434f;
+$secondary : #e35651;
+$dark : #0f131a;
+$danger : #d70f19;
+$warning : #e5c932;
+$success : #237644;
+$light : #adb5bd;
+$white: #ffffff;
+$info: #e44e49;
+$light-light: hsl(60, 22%, 90%);
+
+
+
+@import 'bootstrap/scss/bootstrap';
+
+:root {
+
+  width: 100%;
+  display: block;
+  position: absolute;
+  overflow-x: hidden;
+}
+
+.list-group-horizontal {
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+}
+
+.navbarIcon {
+  height: 3em;
+  width: auto;
+}
+
+.navbarButton {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+
+div.upper {
+  background-color: var(--bs-primary);
+  padding: 0.5em;
+  border: 0;
+}
+
+:disabled {
+  pointer-events: none;
+}
+
+.sidebar-back-container{
+  padding-left: 0.5em;
+  padding-right: 0.5em;  
+  height:12%;
+}
+
+.sidebar-back-button{
+  width:100%;
+  height:100%; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar-back-button-text{
+  font-weight: bold; 
+  font-size: 1.5em;
+}
+
+.sidebar {
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: -350px;
+  background-color: var(--bs-dark);
+  padding-top: 0.5em;
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar-btn-group{
+  min-width:350px;
+  height: 88%;
+}
+
+.contentDark {
+  
+  
+  background: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+}
+
+.user-card {
+  
+  background-color: white;
+  border-radius: 0px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  text-align: center;
+  flex: 0 0 calc((100% - 6*20px)/3);
+  margin: 1.5%;
+}
+
+.user-card img {
+  border-radius: 50%;
+}
+
+.user-card .btn {
+  border-radius: 20px;
+}
+
+.user-list-container {
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+  margin: 0;
+  padding: 0px 10px; /* Removed padding to allow arrows to be on the sides */
+  display: flex; /* Make the container flex to position arrows on the sides */
+  align-items: center; /* Center the arrows vertically */
+  justify-content: center;
+}
+
+
+.user-cards-container {
+  width:calc(100vw - 120px);
+  display: flex;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  flex: 1 0 80% ; /* Added this to prevent the container from growing */
+  white-space: nowrap;
+  padding: 10px 0;
+  margin: 0 0px; /* Give space for the arrows */
+}
+
+.scroll-arrow {
+  background: none;
+  color: gray;
+  border: none;
+  font-size: 40px;
+  cursor: pointer;
+  z-index: 10;
+  flex: 0 0 40px; /* Arrow width */
+}
+
+.scroll-arrow:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.user-card .btn-custom {
+  border-radius: 80%;
+  height: 30px;
+  padding: 0 30px;
+  font-size: 16px;
+  text-align: center;
+  margin: 5px auto;
+  display: block;
+
+  width: 80%;
+}
+
+
+.user-card .user-details {
+  margin-left: 10px;
+}
+
+.user-card .user-name {
+  position: absolute;
+  top: 70px;
+  left: 160px;
+}
+
+.form-control{
+  border-color: var(--bs-light)
+}
+
+.primary{
+  background-color: var(--bs-primary);
+  color: var(--bs-white);
+}
+
+
+.user-card .user-info .icon-container {
+  display: flex;
+  flex-direction: column;
+  overflow-wrap: break-word;
+  
+}
+
+.user-card .profile-icon {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+.user-card .user-major-city {
+  margin:0;
+  padding: 0;
+  text-align: left;
+  
+}
+
+.card-text{
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+.user-card .buttons {
+  position:absolute;
+  bottom: 20px;
+  left: 0px;
+  width: 100%;
+}
+
+.filter-component {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.filter-dropdowns {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.filter-dropdowns select {
+  margin: 0 10px;
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content:right;
+}
+
+.filter-buttons button {
+  margin: 1% 2% 0 0;
+  padding: 5px 15px;
+  width: 100%;
+}
+
+.dropdown-filter {
+  background-color: var(--bs-white);
+  color: var(--bs-dark);
+  border-color: var(--bs-light);
+}
+
+.dropdown-list {
+  margin: 2% 0% 0 0;
+  width: 100%;
+}
+
+.dropdown-filter:hover {
+  background-color: var(--bs-white);
+  color: var(--bs-dark);
+  border-color: var(--bs-light);
+}
+
+.dropdown-item:hover{
+  background-color: var(--bs-light);
+}
+
+.dropdown-item:active{
+  background-color: var(--bs-primary);
+}
+
+.dropdown-menu{
+  width: 100%;
+}
+
+.form-fill{
+  background-color: $light-light;
+}
+
+.dropdown-filter.show {
+  background-color: var(--bs-white);
+  color: var(--bs-dark);
+  border-color: var(--bs-light);
+}
+
+.filter-container {
+  padding: 20px 20px 0px 20px;
+  border-radius: 0px;
+  width: 100%;
+  min-width: 100%;
+  background-color: $light-light;
+  position: relative;
+  transition: 0.3s;
+}
+
+.filter-container.open{
+  top: 0px;
+}
+.selected-options {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.btn-group > .btn{
+  display: -webkit-inline-box;
+}
+
+.dropdown-toggle::after{
+  position: absolute;
+  right: 10px;
+  bottom: 15px;
+}
+
+.selected-option {
+  display: inline-block;
+  background-color: #e9ecef;
+  color: #495057;
+  padding: 5px 10px;
+  margin: 5px;
+  border-radius: 15px;
+  border: 1px solid #adb5bd;
+}
+
+.selected-option:hover {
+  background-color: #dee2e6;
+  cursor: pointer;
+}
+
+.black-square {
+  display: inline-block;
+  margin-right: 8px;
+  margin-bottom: 3px;
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  vertical-align: middle;
+}
+
+.black-line {
+  height: 2px;
+  background-color: black;
+  margin: 20px 0px 0px 0px;
+  padding: 0;
+  min-width: 110%;
+  transform: translateX(-5%);
+}
+
+
+
+.bottom20{
+  margin-bottom: 20px ;
+}
+
+.btn-small {
+  margin-left: 5px;
+  padding: 0px 6px;
+  background-color:  #adb5bd;
+  border-width: 0px;
+  border-radius: 10px;
+  color: #e9ecef;
+}
+
+.notification-open{
+  position: fixed;
+  top: 60px;
+  right: 120px;
+  z-index: 999;
+  background-color: var(--bs-white);
+  border: 3px solid black;
+}
+
+.notif-box{
+  border: 1px solid var(--bs-light);
+  padding: 10px;
+  word-break: break-word;
+}
+
+.notification{
+  position: fixed;
+  top: 20px;
+  right: 110px;
+  z-index: 999;
+  border-radius: 10px;
+  margin: 0px 0px;
+  padding: 0px 5px;
+}
+
+
+
+.width-btn{
+  width: 80%;
+}
+
+
+.max-width-btn{
+  width: 100%;
+}
+
+.day.selected {
+  background-color:#9CBDCD;
+  color: var(--bs-dark);
+}
+
+.blank{
+  color: var(--bs-white);
+  pointer-events: none;
+}
+
+
+
+.profile-section {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.profile-upper {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.profile-upper h3 {
+  display: inline-block;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.profile-lower p {
+  display: inline-block;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.profile-upper img {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 15px;
+}
+
+hr {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.weekday{
+  justify-content: center;
+}
+
+.profile-left {
+  margin-top: 5%;
+}
+
+.alert-box.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-20px);
+}
+
+.alert-box {
+  position: relative;
+  margin-top: 1%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 4px 20px;
+  width:fit-content;
+  color: white;
+  background-color: #cb525e;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+}
+
+.close-button {
+  color: white;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.save-cancel-container .btn + .btn {
+  margin-left: 1%;
+}
+
+.sex-select-group {
+  display: flex;
+  align-items: center;
+}
+
+.sex-label {
+  margin-right: 10px;
+}
+
+.sex-select {
+  flex-grow: 1;
+}
+
+
+.SelectedCourseBox{
+  max-height: 100vh;
+  overflow-y: scroll;
+}
+
+.hide-item{
+  display: none;
+}
+
+.swing-animation{
+  animation: swing 0.8s linear infinite; /* adjust duration and timing function as needed */
+}
+
+@keyframes swing {
+  0% {
+      transform: rotate(-15deg);
+  }
+  50% {
+      transform: rotate(15deg);
+  }
+  100% {
+      transform: rotate(-15deg);
+  }
+}

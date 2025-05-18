@@ -1,0 +1,89 @@
+.home-page-background {
+    background-image: url('../../public/schoolfriends.jpg');
+    /* 替换为您的图片实际路径 */
+    object-fit: cover;
+    /* load image faster */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding-top: 60px;
+    padding-left: 20px ;
+    padding-right: 20px;
+    min-height: 120vh;
+    /* 根据需要调整高度 */
+}
+
+.navbar {
+    background-color: #2e434f;
+    /* 设置导航栏背景颜色 */
+    overflow: visible;
+    border: 1px solid black
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: row;
+    /* 确保导航项水平排列 */
+    justify-content: center;
+    /* 可以添加这个属性来居中导航链接 */
+    align-items: center;
+    /* 这个属性确保子项在交叉轴上居中 */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item {
+    position: relative;
+    /* 为下拉菜单的绝对定位提供基准 */
+}
+
+/* 导航链接样式 */
+.nav-item a {
+    display: block;
+    color: white;
+    padding: 1rem;
+    font-size: x-large;
+    text-decoration: none;
+    width: 20vw;
+
+}
+
+.nav-item li {
+    font-size: x-large;
+}
+
+/* 下拉菜单默认不显示 */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #f0f0f0;
+    min-width: 160px;
+    /* 设置下拉菜单的最小宽度 */
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    /* 添加一些阴影效果 */
+    cursor: pointer;
+}
+
+/* 鼠标悬停时显示下拉菜单 */
+.nav-item:hover .dropdown-menu {
+    display: block;
+}
+
+/* 下拉菜单项样式 */
+.dropdown-menu a {
+    color: black;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-menu a:hover {
+    background-color: #ddd;
+    /* 鼠标悬停时的背景色 */
+}
+
+.dropdown-menu-large-text:before {
+    content: "\00a0\00a0";
+    /* 在文本前添加两个空格 */
+}
